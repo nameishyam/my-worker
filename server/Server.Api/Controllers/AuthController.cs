@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Server.Api.Controllers
@@ -6,6 +7,7 @@ namespace Server.Api.Controllers
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-
+        [AllowAnonymous]
+        public async Task<IActionResult> Signup()
     }
 }
